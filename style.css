@@ -239,11 +239,54 @@ progress::-moz-progress-bar {
   max-width: var(--max-width);
 }
 
+.gray-scale {
+  filter: grayscale(1);
+}
+
 .none {
   display: none;
 }
 
+.section {
+  padding: 2rem 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .full-lg-scream {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+  
+  .text-lg-left {
+    text-align: left;
+  }
+  
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
 /* Site styles */
+.about > article {
+  margin-bottom: 2rem;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -272,6 +315,13 @@ progress::-moz-progress-bar {
 }
 
 @media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
   .header {
     position: sticky;
     top: 0;
