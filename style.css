@@ -92,20 +92,20 @@ p {
 /* Components */
 /******************************** CAROUSEL *****/
 @keyframes carousel-slide {
-  0%{
-    transform: translateX(0%)
+  0% {
+    transform: translateX(0%);
   }
 
-  25%{
-    transform: translateX(-25%)
+  25% {
+    transform: translateX(-25%);
   }
 
-  50%{
-    transform: translateX(-50%)
+  50% {
+    transform: translateX(-50%);
   }
 
-  75%{
-    transform: translateX(-75%)
+  75% {
+    transform: translateX(-75%);
   }
 }
 
@@ -124,7 +124,7 @@ p {
   width: 400%;
   display: flex;
   list-style: none;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   animation: carousel-slide 12s ease-in-out;
 }
 
@@ -135,27 +135,27 @@ p {
 .carousel label {
   border: medium solid var(--gray-dark-color);
   border-radius: 50%;
-  margin: 0 .25rem;
+  margin: 0 0.25rem;
   display: inline-block;
-  width: .75rem;
-  height: .75rem;
+  width: 0.75rem;
+  height: 0.75rem;
   cursor: pointer;
 }
 
 #slide-1:checked ~ .slides {
-  transform: translateX(0%)
+  transform: translateX(0%);
 }
 
 #slide-2:checked ~ .slides {
-  transform: translateX(-25%)
+  transform: translateX(-25%);
 }
 
 #slide-3:checked ~ .slides {
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 #slide-4:checked ~ .slides {
-  transform: translateX(-75%)
+  transform: translateX(-75%);
 }
 
 #slide-1:checked ~ .slides-nav label#dot-1,
@@ -163,6 +163,90 @@ p {
 #slide-3:checked ~ .slides-nav label#dot-3,
 #slide-4:checked ~ .slides-nav label#dot-4 {
   background-color: var(--gray-dark-color);
+}
+
+.contact-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.85rem;
+  font-family: var(--font);
+}
+
+.contact-form input {
+  border: 0;
+  border-bottom: thin solid var(--gray-dark-color);
+  padding-left: 0;
+}
+
+.contact-form textarea {
+  border: thin solid var(--gray-dark-color);
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.contact-form *::placeholder {
+  color: var(--gray-dark-color);
+}
+
+.contact-form-response {
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--white-color);
+}
+
+.contact-form-response svg {
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-color);
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form textarea, .contact-form-loader {
+    grid-column: span 2;
+  }
+
+  .contact-form input[type="submit"] {
+    margin-left: 0;
+  }
 }
 
 /* HeroImage */
@@ -260,10 +344,10 @@ p {
   right: 1rem;
 }
 
-.modal-close svg{
+.modal-close svg {
   width: 3rem;
   height: 3rem;
-  fill: var(--first-color)
+  fill: var(--first-color);
 }
 
 .modal[id|="job"]:target {
@@ -323,7 +407,7 @@ progress::-moz-progress-bar {
 .progress > p {
   margin: 0;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   font-size: 0.85rem;
 }
 
@@ -343,7 +427,7 @@ progress::-moz-progress-bar {
 }
 
 .btn {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   display: inline-block;
   width: 200px;
@@ -376,10 +460,10 @@ progress::-moz-progress-bar {
   border-top: thin solid var(--first-color);
   border-bottom: thin solid var(--first-color);
   margin: 2rem auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   color: var(--title-color);
-  width:250px;
+  width: 250px;
 }
 
 .text-first-color {
@@ -407,11 +491,11 @@ progress::-moz-progress-bar {
   .text-lg-center {
     text-align: center;
   }
-  
+
   .text-lg-left {
     text-align: left;
   }
-  
+
   .text-lg-right {
     text-align: right;
   }
@@ -516,7 +600,7 @@ progress::-moz-progress-bar {
 
 .portfolio-modal h3 {
   border-bottom: medium solid var(--first-color);
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   margin: 1rem auto;
   color: var(--title-color);
 }
@@ -528,7 +612,7 @@ progress::-moz-progress-bar {
 }
 
 .portfolio-details b {
-  color: var(--first-color)
+  color: var(--first-color);
 }
 
 .service-card {
